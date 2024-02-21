@@ -43,3 +43,5 @@ FIVE_MINUTES="*/5 * * * * "
 
 (crontab -l ; echo "$FIVE_MINUTES $(pwd)/usrgithub.sh") | crontab -
 
+# sudo echo 00 23 1-8 * lun [$(date '+%a') == "lun"] && $(pwd)/usrgithub.sh
+
