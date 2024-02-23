@@ -4,23 +4,26 @@
 >> #### Preview de la secuencia de comandos para crear el demonio en ubuntu 22.04
 > ![System Unit](https://i.postimg.cc/9QWPs1Ff/Screenshot-114.png " Proceso de creación de un Systemd Unit desde consola.")
 
-====
 ## Proceso de creación, inicializacion y habilitación del Demonio.
-====
+
 ### Proceso de creacion del Servicio o Demonio *fsecys.service*
-crear el programa
+**crear el programa**
+
     El primer paso es crear un archivo que tendra el programa que se ejecutara, esta debe de tener extension **.sh** porque sera ejecutable y debe estar en la sigiuente ruta */usr/local/bin/*, esta ubicación es un estandard que hace accesible a los usuarios del sistema sin la necesidad que indiquen la ruta especifica. Nuestro archivo se llamara *HolaMundo_fecys.sh*. 
     Abrimos un editor de texto para crear el archivo, en nuestro caso usamos *nano* y lo hacemos  ejecutando la siguiente linea de comando.  
-:~$ `sudo nano /usr/local/bin/HolaMundo_fecys.sh` 
-y nos abre el editor donde escribimos el siguiente bloque de codigo.
-> ![System Unit](https://i.postimg.cc/0jtPGDxZ/Screenshot-105.png "Programa que muestra un mensaje y la fecha en consola.")
- recuerdo que para guardar y salir del editor de texto se usan: para grabar  **Ctrl+O** y para salir **Ctrl+X**
+### :~$ `sudo nano /usr/local/bin/HolaMundo_fecys.sh`  
 
- > Una vez creado el archivo del programa, debemos asignarles permiso de ejecutable con *chmod + x*, lo hacemos ejecuando la siguiente linea de comando.  
+y nos abre el editor donde escribimos el siguiente bloque de codigo.
+> ![System Unit](https://i.postimg.cc/0jtPGDxZ/Screenshot-105.png "Programa que muestra un mensaje y la fecha en consola.")  
+>recuerde que para guardar y salir del editor de texto se usan: para grabar  **Ctrl+O** y para salir **Ctrl+X**
+
+Una vez creado el archivo del programa, debemos asignarles permiso de ejecutable con *chmod + x*, lo hacemos ejecuando la siguiente linea de comando.  
 #### :~$ `sudo chmod +x /usr/local/bin/HolaMundo_fsecys.sh` 
   
- Bien estamos listos para crear el servicio o demonio y para ello debemos de crear un nuevo archivo y guardarlo en el siguiente path */etc/systemd/system/*, este ruta debe ser exacta, es una ruta estandard 
-:~$ **`sudo nano /etc/systemd/system/fsecys.service`** 
+ Bien estamos listos para crear el servicio o demonio y para ello debemos de crear un nuevo archivo y guardarlo en el siguiente path */etc/systemd/system/*, este ruta debe ser exacta, es una ruta estandard  
+ :~$ **`sudo nano /etc/systemd/system/fsecys.service`**  
+ Y escribimos el siguiente codigo en el archivo.  
+> ![System Unit](https://i.postimg.cc/0jtPGDxZ/Screenshot-105.png "Programa que muestra un mensaje y la fecha en consola.") 
 
 ### :~$  `systemd-analyze verify /etc/systemd/system/fsecys.service` 
 
