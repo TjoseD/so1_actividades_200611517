@@ -59,7 +59,7 @@ Con esto queda finalizada y puesta en marcha el servicio ___fsecys___.
 ----
 ----
 
-## Chequeo del estado del servicio y de su logfile.
+# Chequeo del estado del servicio y de su logfile.
 ##### Estado del servicio o demonio.
 > Para verificar el estado del servicio, podemos verificar su ___status___ con el comando __systemctl__ .
 
@@ -75,14 +75,14 @@ Con esto queda finalizada y puesta en marcha el servicio ___fsecys___.
 ![System Unit](https://i.postimg.cc/WpMsXnQH/Screenshot-128.png "")  
 
 
-Y de esta manera terminamos con este manual. Good luck!
+Y de esta manera __terminamos__ con este manual. ___¡Good luck!___
 
 ---
 >> Elementos 
 
 Comandos:  
 
-    __chmod +x__  |  __system-analyze verify__   |  __systemctl daemon-reaload__  |  __system start__  |  __systemctl enable__  |  __systemctl status__  |  __journalctl -u__.  
+    chmod +x  ,  system-analyze verify   ,  systemctl daemon-reaload  ,  system start  ,  systemctl enable  ,   systemctl status  ,  journalctl -u.  
 
 Directorios:  
 
