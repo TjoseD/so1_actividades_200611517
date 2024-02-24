@@ -86,8 +86,8 @@ Comandos:
 
 Directorios:  
 
-    + _/usr/local/bin_
-    + _/etc/systemd/system_  
+    + /usr/local/bin
+    + /etc/systemd/system  
 
 Archivos:
 
