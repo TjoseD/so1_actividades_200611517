@@ -13,14 +13,18 @@ El primer paso es crear un archivo que tendrá el programa que se ejecutará, es
 Abrimos un editor de texto para crear el archivo, en nuestro caso usamos *nano* y lo hacemos  ejecutando la siguiente linea de comando.  
 ### :~$ `sudo nano /usr/local/bin/HolaMundo_fecys.sh`  
 
-> y nos abre el editor de texto donde escribimos el siguiente bloque de código.
+> y nos abre el editor de texto donde escribimos el siguiente bloque de código.  
+
 > ![System Unit](https://i.postimg.cc/0jtPGDxZ/Screenshot-105.png "Programa que muestra un mensaje y la fecha en consola.")  
+
 >recuerde que para guardar y salir del editor de texto se usan: para grabar  **Ctrl+O** y para salir **Ctrl+X**
 
 Una vez creado el archivo del programa, debemos asignarle permiso de ejecutable con **chmod + x**, lo hacemos ejecutando la siguiente línea de comando.  
 ### :~$ `sudo chmod +x /usr/local/bin/HolaMundo_fsecys.sh` 
-  
- Bien estamos listos para crear el servicio o demonio y para ello debemos de crear un nuevo archivo y guardarlo en la siguiente ruta */etc/systemd/system/*, este ruta debe ser exacta, es una ruta estandard  
+
+__Crear un archivo Unit__
+ Bien estamos listos para crear el servicio o demonio y para ello debemos de crear un nuevo archivo y guardarlo en la siguiente ruta */etc/systemd/system/*. Este archivo especifica la ubicación del archivo ejecutable creado anteriormente _HolaMundo_fsecys.sh_.  
+
 ### :~$ `sudo nano /etc/systemd/system/fsecys.service`  
 >Y escribimos el siguiente código en el archivo.  
 
@@ -47,12 +51,14 @@ Una ves recargado los demonios hay que inicializar el nuevo servicio con la inst
 Bien si es un servicio que queremos que se inicie automaticamente cuando arranca el sistema, debemos indicarle al comando **systemctl** que lo habilite pasandole el parámetro ***enable*** y el nombre del servicio, en este caso se llama *fsecys*.
 > La siguiente línea de comando realiza eso.  
 
-#### :~$ `systemctl enable fsecys`  
+### :~$ `systemctl enable fsecys`  
 
 Con esto queda finalizada y puesta en marcha el servicio ___fsecys___.
 
 
 ----
+----
+
 ## Chequeo del estado del servicio y de su logfile.
 ##### Estado del servicio o demonio.
 > Para verificar el estado del servicio, podemos verificar su ___status___ con el comando __systemctl__ .
@@ -74,7 +80,8 @@ Y de esta manera terminamos con este manual. Good luck!
 ---
 >> Elementos 
 
-Comandos: 
+Comandos:  
+
     __chmod +x__  |  __system-analyze verify__   |  __systemctl daemon-reaload__  |  __system start__  |  __systemctl enable__  |  __systemctl status__  |  __journalctl -u__.  
 
 Directorios:  
@@ -89,12 +96,14 @@ Archivos:
 
 <img src="https://i.postimg.cc/HLcg54w3/Screenshot-131.png" width="250" height="150">
 <img src="https://i.postimg.cc/QCNYgjLs/Screenshot-132.png" width="300" height="200">
+
 ---
-Resumen  
 
-    Creacion: ![Creacion de System Unit](https://i.postimg.cc/9QWPs1Ff/Screenshot-114.png "Pasos para crear un demonio en Ubuntu 22.04") 
+___Resumen___  
 
-    Inicializacion y habilitacion: ![Creacion de System Unit](https://i.postimg.cc/xdrsxvr6/Screenshot-121.png "Pasos para poner en marcha y habilitar demonio en Ubuntu 22.04")
+Creacion: ![Creacion de System Unit](https://i.postimg.cc/9QWPs1Ff/Screenshot-114.png "Pasos para crear un demonio en Ubuntu 22.04") 
+
+Inicializacion y habilitacion: ![Creacion de System Unit](https://i.postimg.cc/xdrsxvr6/Screenshot-121.png "Pasos para poner en marcha y habilitar demonio en Ubuntu 22.04")
 
 ___  
 
