@@ -1,10 +1,10 @@
 >> #### Actividad 4 so1
-# Chat basdo en named pipe y bash
+# Chat basado en named pipe y bash
 
 > #### Preambulo
 #### Breve historia de pipe
 
-Los ___Pipes___ fueron inventados por ___Douglas Mcilroy___ y fueron incorporados dentro de sistemas UNIX en 1973. Son _archivos especiales_ o ___buffer___ que se pueden visualizar como tubos fisicos que conectan la salidas del predecesor con la entrada del sucesor.
+    Los ___Pipes___ fueron inventados por ___Douglas Mcilroy___ y fueron incorporados dentro de sistemas UNIX en 1973. Son _archivos especiales_ o ___buffer___ que se pueden visualizar como tubos fisicos que conectan la salidas del predecesor con la entrada del sucesor.
  
 
 ### ¿Que es un named pipe?
@@ -50,14 +50,15 @@ Para borrar un archivo __FIFO__  lo hacemos con el comando __rm__ seguido por el
  
 # Crear un chat utilizando named pipe y bash
 
-## Preparacion del escenario.
+## Preparación del escenário.
 Abrimos dos terminales para ver la comunicacién por el chat a traves del archivo __FIFO__, __named pipe__
 [![Screenshot-from-2024-03-03-17-14-20.png](https://i.postimg.cc/ZRVg9NhN/Screenshot-from-2024-03-03-17-14-20.png)](https://postimg.cc/vgxXkcT8)  
 
 
 ## Crear un named pipe 
 Creamos un ___named pipe___  con el comando __mkfifo__ y lo llamaremos ___MICHATFIFO___.   
-Por convensión se escribe con letras mayusculas los nombres de los ___named pipe___ para que sea mas facil de visualizarlos en el directorio de archivos.
+Por convensión se escribe con letras mayusculas los nombres de los ___named pipe___ para que sea mas facil de visualizarlos en el directorio de archivos.  
+
 [![Screenshot-from-2024-03-03-17-30-13.png](https://i.postimg.cc/gcMFjCY7/Screenshot-from-2024-03-03-17-30-13.png)](https://postimg.cc/DmbYYY4Q)  
 
 ### Ver el archivo FIFO recien creado
@@ -96,26 +97,26 @@ Se muestra en la siguiente imagen con los _menajes_ compartidos entre los dos us
 [![Screenshot-from-2024-03-03-17-45-39.png](https://i.postimg.cc/FRzzq2NJ/Screenshot-from-2024-03-03-17-45-39.png)](https://postimg.cc/jwVRn3Ws)
 
 Video  
+
+
+[![VER EL VIDEO de  la HOJA DE TRABAJO 1](https://i.postimg.cc/gcMFjCY7/Screenshot-from-2024-03-03-17-30-13.png)](https://www.loom.com/share/2b50d9a8dacb45d184ecaebbd84c7df7?sid=5aa2ebc3-6ae2-49c3-8b57-73246abc9460)   
+
 En sl siguiente video se puede ver como se va dando esa comunicación e intercambio de mensajes.  
-
-[![VER EL VIDEO de  la HOJA DE TRABAJO 1](https://i.postimg.cc/gcMFjCY7/Screenshot-from-2024-03-03-17-30-13.png)](https://www.loom.com/share/2b50d9a8dacb45d184ecaebbd84c7df7?sid=5aa2ebc3-6ae2-49c3-8b57-73246abc9460)  
-
-
 
 
 
 ____
 ____  
-Conceptos:  
-pipe, named pipe, FIFO, IPC, redireccionamiento , kernel, proceso, comunicación. 
+##### Conceptos:  
+    pipe, named pipe, FIFO, IPC, redireccionamiento , kernel, proceso, comunicación. 
 
 
-Comandos:  
+##### Comandos:  
 
     mkfifo -m ,  ls -l, cat, echo   
 
 
-Archivos:  MICHATFIFO
+##### Archivos:  MICHATFIFO
 
 ___  
 
