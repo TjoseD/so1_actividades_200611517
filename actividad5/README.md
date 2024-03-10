@@ -9,12 +9,12 @@
 -----
 
 ### ¿Cuántos procesos(_process_) únicos son creados?  
-    Se crearon 3 procesos unicos.  
-    - 1 *Padre*. pid: __717056__  
-    - 2 *Hijos*.  pid:__717057__, pid:__717058__ 
+Se crearon 3 procesos unicos.  
+- 1 *Padre*. pid: __717056__  
+- 2 *Hijos*.  pid:__717057__, pid:__717058__ 
 
 ### ¿Cuántos hilos(_threads_) son creados?  
-    Se crearon ***2 hilos***. uno para cada hijo
+Se crearon ***2 hilos***. uno para cada hijo
 
 ----  
 ##Gráficas
