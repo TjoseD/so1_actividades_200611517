@@ -17,14 +17,14 @@ Se crearon 3 procesos unicos.
 Se crearon ***2 hilos***. uno para cada hijo
 
 ----  
-##Gráficas
-Proceses e hilos creados:  
+## Gráficas  
+    Proceses e hilos creados:  
 [![Screenshot-from-2024-03-09-19-30-14.png](https://i.postimg.cc/DypLxmg9/Screenshot-from-2024-03-09-19-30-14.png)](https://postimg.cc/1f68tmbB)
 
 
 ##### Para ver los procesos desde la terminal ejecutar la siguiente linea de comandos  
 #### :~$ `ps aux` 
-Los procesos en ejecución mostrados en consola 
+    Los procesos en ejecución mostrados en consola 
 [![Screenshot-from-2024-03-09-19-29-46.png](https://i.postimg.cc/nhMYxqrV/Screenshot-from-2024-03-09-19-29-46.png)](https://postimg.cc/pmbnYhK3)
 
 ----
