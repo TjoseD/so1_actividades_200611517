@@ -11,7 +11,7 @@
 
 _Resultado_:  
 **Numero de procesos creados**:  
-[![Procesos creados](https://i.postimg.cc/Y08T6jrc/Screenshot-from-2024-09-12-09-09-17.png)](https://postimg.cc/LgYyR9gv) 
+[![Procesos creados](https://i.postimg.cc/Vvcjt7tS/Screenshot-from-2024-09-12-09-42-32.png)](https://postimg.cc/62Y2JfYw)
 
 ## P2 Creación de un proceso hijo que se convierta en zombie.
 
