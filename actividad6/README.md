@@ -5,6 +5,7 @@
 
 [![Programa de procesos en lenguaje c](https://i.postimg.cc/zvT5hTvx/Screenshot-from-2024-09-12-09-14-24.png)](https://postimg.cc/0K5LRMpS)  
 
+[Screenshot-from-2024-09-12-09-09-17.png](https://postimg.cc/LgYyR9gv)
 
 _Resultado_:  
 **Numero de procesos creados**:  
