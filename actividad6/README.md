@@ -1,5 +1,6 @@
 >> #### Actividad 6 so1 semestre 2
 -----
+
 # Procesos e hilos
 
 ## P1 ¿Cuantos procesos son creados por el siguiente programa?  
@@ -15,16 +16,18 @@ _Resultado_:
 > Procesos creados con la _ejecución_ del programa `p1_procesos`  
 [![Procesos creados](https://i.postimg.cc/nzGW2c3q/Screenshot-from-2024-09-13-14-33-24.png)](https://postimg.cc/gXr4kdF0)
 
-> Como se puede ver se crearon __8 procesos unicos__ siendo el _proceso padre_ ___bash___ con **PID: 243717**  
+Como se puede ver se crearon __8 procesos únicos__ siendo el _proceso padre_ ___bash___ con **PID: 243717**  
 Estos __8 procesos__ se pueden verificar al revisar _los procesos activos_ con el comando __ps aux__  
 
 > **Procesos en ejecucion** `ps aux`  
-[![Procesos en ejecución](https://i.postimg.cc/6qWtBP7x/Screenshot-from-2024-09-13-14-30-15.png)](https://postimg.cc/47Sr5BbW)   
+[![Procesos en ejecución](https://i.postimg.cc/6qWtBP7x/Screenshot-from-2024-09-13-14-30-15.png)](https://postimg.cc/47Sr5BbW)  
+
 Lo que esta _resaltado en blanco_ son los ___8 procesos___ creados por la ___ejecucion___ del programa __p1_procesos__  
 Los __PID__ de los ___8 procesos___ son: **265617, 265619, 265621,265622, 265623, 265624, 265625 y 265627**.   
 
 
 >>  
+-----  
 
 
 ## P2 Creación de un proceso hijo que se convierta en zombie.  
@@ -32,6 +35,7 @@ Los __PID__ de los ___8 procesos___ son: **265617, 265619, 265621,265622, 265623
 > Codigo fuente del ___programa___ **`p2_proceso_zombie`** el cual __crea__ un __proceso zombie__     
 [![Programa zombie](https://i.postimg.cc/MHGJFRkx/Screenshot-from-2024-09-12-23-44-44.png)](https://postimg.cc/R62Y3WVb)
 
+_Resultado_:  
 
 Al ___ejecutar___ el proceso, el _proceso hijo_ tiene como tarea ___mostrar los procesos activos___ con el comando **`ps`**. Este proceso tiene un **PID: 72245**   
 > ***Ejecucion del programa*** `./p2_proceso_zombie`     
@@ -44,10 +48,11 @@ Podemos ver el ___proceso zombie___ al revisar _los proceso activos_ con el coma
 
 
 Tambien se puede **verificar** _los procesos zombie_ al ***ejecutar*** el comando __top__   que nos muestra información de ___cuantos procesos zombie existen___. En este caso nos indica que **existe uno**, dicha información esta _resaltado_ con ___fondo blanco___.  
-___Ejecución del comando___ **`top`**  
+> ___Ejecución del comando___ **`top`**  
 [![commando top](https://i.postimg.cc/L5XPxyNT/Screenshot-from-2024-09-12-23-43-25.png)](https://postimg.cc/ftGkLv4t)
 
 >>  
+----  
 
 
 ## P3 Procesos unicos e hilos unicos
@@ -57,6 +62,7 @@ El _programa_ ___p3_procesos_hilos___ tiene como tarea ___crear procesos e hilos
 > __Codigo fuente del programa `p3_procesos_hilos`__  
 [![Programa de procesos e hilos unicos usando fork](https://i.postimg.cc/MHMFY7X4/Screenshot-from-2024-09-13-13-18-33.png)](https://postimg.cc/n9x2FQ4Y)
 
+_Resultado_:  
 
 #### _Visualizando_ la información de los procesos e hilos unicos.   
 Para visualizar ___cuantos procesos___ fueron creados por el programa **p3_procesos_hilos** solo debemos de __ejecutar__ el programa y los __printf__ en el _programa_ nos proporciona la _información_ concerniente a ___los procesos creados.___  
@@ -75,9 +81,9 @@ El __getpid()__ nos permite _obtener el **PID** del proceso_  y el __TID__ el _h
 
 ### En total se crearon  __6 Proces__ y  __6 Hilos__ 
 El ___primer proceso___ e hilo corresponde al ___pronceso principal___ el del programa y se crean 5 procesos mas.  
-El __primer  fork()___ crea **1 proceso** y  **1 hilo** mas   
+El ___primer  fork()___ crea **1 proceso** y  **1 hilo** mas   
 El ___segundo fork()___ es ejecutado solo por ___el proceso hijo___  y crea **1 proceso**       
-El __tercer fork()___ es ejecutado por ___el padre e hijo del primer fork___ y crean **2 procesos** mas, y tambien es __ejecutado__ por ___el proceso hijo del segundo fork___ que crea **otro proceso**.   
+El ___tercer fork()___ es ejecutado por ___el padre e hijo del primer fork___ y crean **2 procesos** mas, y tambien es __ejecutado__ por ___el proceso hijo del segundo fork___ que crea **otro proceso**.   
 
 _Resumiedo_   
 > __Total de procesos__ = [proceso principal] __+__ [Proceso creados por fork1] __+__ [proceso creados por fork2] __+__ [proceso creados por fork3]  
