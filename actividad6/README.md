@@ -27,7 +27,15 @@ Ejecución del comando `top`
 
 ## P3 Procesos unicos e hilos unicos
 
+Progrma de Procesos e hilos unicos usando el comando fork  
 
+p3_procesos_hilos.c  
+[![Programa de procesos e hilos unicos usando fork](https://i.postimg.cc/MHMFY7X4/Screenshot-from-2024-09-13-13-18-33.png)](https://postimg.cc/n9x2FQ4Y)
+
+Visualizando la información de los procesos e hilos unicos   
+
+Ejecucion del programa  `./p3_procesos_hilos`  
+[![ejecucion de ./p3_procesos_hilos](https://i.postimg.cc/90CvcRfN/Screenshot-from-2024-09-13-13-14-53.png)](https://postimg.cc/bDV6TvkQ)
 
 
 
