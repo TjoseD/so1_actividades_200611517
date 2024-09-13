@@ -59,31 +59,35 @@ Para visualizar cuantos procesos fueron creados al ejecutar el programa **p3_pro
 > **Ejecucion del programa  `./p3_procesos_hilos`**    
 [![Ejecución del programa p3_procesos_hilos](https://i.postimg.cc/zG7Q3LKs/Screenshot-from-2024-09-13-15-31-13.png)](https://postimg.cc/k2Vspgjs)  
 
-Como se puede ver nos muestra cuantas veces fue ejecutada la instruccion printf y que proceso lo realizo.  
-Cada printf nos muestra el pid retornado por fork, el getpid() que es el del proceso y el  TID: que es el hilo del proceso.  
+Como se puede ver nos muestra cuantas veces fue ejecutada la instruccion __printf__ y que _proceso_ lo realizo.  
+Cada __printf__ nos muestra el ___pid retornado___ por __fork()__, el __getpid()__ nos permite obtner  el __PID__ del proceso y el  __TID__: que es el ___hilo del proceso___.  
 
-Cuando se crea un proceso con __fork()__ retorna un __PID__ por cad proceso. Si **PID = 0**  significa que es un ___proceso hijo___ porque _no tiene hijos_. Si  **PID > 0** entonces es un __proceso padre__  y el  __PID__ corresponde al de su  hijo.  
+Cuando se crea un proceso con __fork()__ retorna un __PID__ por cada proceso. Si **PID = 0**  significa que es un ___proceso hijo___ porque _no tiene hijos_. Si  **PID > 0** entonces es un __proceso padre__  y el  __PID__ corresponde al pid de su  hijo.  
 
 El __getpid()__ nos permite _obtener el PID del proceso_  y el __TID__ el _hilo vinculado al  proceso_, como se darán cuenta  ___el getpid() y el TID coinciden___ porque para cada proceso tiene un hilo relacionado.   
 
 #### En total se crearon  __6 Proces__ y  __6 Hilos__ 
-uno corresponde al pronceso principal el del programa y se crean 5 procesos mas 
-el primer  fork() crea 1 proceso y  un hilo mas 
-el segundo fork() es ejecutado solo por el proceso hijo  y crea otro proceso 
-el tercer fork() es ejecutado por el padre e hijo del primer fork y crean 2 procesos mas, y tambien es ejecutado por el proceso hijo del segundo fork que crea otro proceso.  
+El ___primer proceso___ e hilo corresponde al ___pronceso principal___ el del programa y se crean 5 procesos mas.  
+El __primer  fork()_ crea **1 proceso ** y  un hilo mas   
+El ___segundo fork()___ es ejecutado solo por ___el proceso hijo___  y crea **1 proceso**       
+El __tercer fork()___ es ejecutado por ___el padre e hijo del primer fork___ y crean **2 procesos** mas, y tambien es __ejecutado__ por ___el proceso hijo del segundo fork___ que crea **otro proceso**.   
+
 _Resumiedo_   
->> Total de procesos = proceso principal + Proceso creados por fork1 + proceso creados por fork2 + proceso creados por fork3  
-#### >> Total de procesos = 1 + 1 + 1 + 3 = **6** 
+>> __Total de procesos__ = proceso principal **+** Proceso creados por fork1 **+** proceso creados por fork2 **+** proceso creados por fork3  
 
-+ Procesos PID: **231556,  231557, 231558, 231559 , 231562, 231563** 
-+ Hilos TID: ___2315556, 231557,  231558, , 231559,  231562, 231563___  
+###  Total de procesos = 1 + 1 + 1 + 3 = **6** 
+
+#### + PID de los Procesos: **231556,  231557, 231558, 231559 , 231562, 231563** 
+#### + TID de los Hilos: ___2315556, 231557,  231558, , 231559,  231562, 231563___  
 
 
 
-Para visualizar estos proces creados , solo ejecutamos ps aux para que nos muestre los proceso activos.
->> **Ejecutar `ps aux`  
-[![Visualización de procesos activos](https://i.postimg.cc/rydCrdXB/Screenshot-from-2024-09-13-15-32-53.png)](https://postimg.cc/NLcHhj0D)   
-Los procesos resaltados con fondo blanco son los proceso vinculados a la ___ejecución___ de  **p3_procesos_hilos**  
+Para ___visualizar___ estos ***procesos creados**, solo ejecutamos **`ps aux`** para que nos muestre los ___procesos activos___.  
+
+> **Ejecutar `ps aux`**  
+  [![Visualización de procesos activos](https://i.postimg.cc/rydCrdXB/Screenshot-from-2024-09-13-15-32-53.png)](https://postimg.cc/NLcHhj0D)   
+
+Los ___procesos resaltados___ con *fondo blanco* son los proceso vinculados a la ___ejecución___ de  **p3_procesos_hilos**  
 
 
 ### procesos: 231556,  231557, 231558, 231559 , 231562, 231563 
@@ -98,14 +102,15 @@ ___Resumen___
 
 
 #### Comandos o funciones:
-> `ps aux`  
- `ps -el`  
- `pstree`  
-+ fork()  
-+ pthread_create()  
-+ exit(-1)   
-+ exit(NULL)  
-+ getpid()  
+> ~:$`ps aux`  
+ ~:$`ps -el`  
+ ~:$ `~:$pstree`  
+ ~:$ `top` 
+ `fork()`  
+ `pthread_create()`  
+ `exit(-1)`   
+ `exit(NULL)`  
+ `getpid()`  
 
 
 ___  
